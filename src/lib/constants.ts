@@ -235,26 +235,28 @@ export const ROLE_PERMISSIONS = {
 
 export const THEME_COLORS = {
   light: {
-    primary: '#2680eb',
-    text: '#838383',
-    line: '#d9d9d9',
-    fill: '#f9f9f9',
+    primary: '#3fb3e8',
+    secondary: '#f47b50',
+    text: '#6f6c80',
+    line: '#e3e2ea',
+    fill: '#f4f4f6',
   },
   dark: {
-    primary: '#2680eb',
-    text: '#7b7b7b',
-    line: '#3a3a3a',
-    fill: '#191919',
+    primary: '#3fb3e8',
+    secondary: '#f47b50',
+    text: '#a9a6bd',
+    line: '#3a3848',
+    fill: '#1c1b24',
   },
 } as const;
 
 export const CHART_COLORS = [
-  '#2680eb',
-  '#9256d9',
-  '#44b556',
-  '#e68619',
+  '#3fb3e8',
+  '#f47b50',
+  '#fdc316',
+  '#5ec26a',
+  '#a7a5ec',
   '#e34850',
-  '#f7bd12',
   '#01bad7',
   '#6734bc',
   '#89c541',

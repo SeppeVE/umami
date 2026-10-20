@@ -99,6 +99,7 @@ export function SettingsNav({
                 justifyContent={isCollapsed ? 'center' : undefined}
                 hover={{ backgroundColor: 'surface-sunken' }}
                 backgroundColor={isSelected ? 'surface-sunken' : undefined}
+                data-nav-selected={isSelected || undefined}
                 borderRadius
                 minHeight="9"
               >
