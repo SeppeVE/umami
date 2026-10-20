@@ -136,6 +136,8 @@ button.rounded:not(:disabled):active {
 /* Selected item in the side navigation. */
 [data-nav-selected] {
   background-color: var(--theme-yellow) !important;
+  /* Leave room for the offset shadow; nav lists sit in clipping scroll areas. */
+  margin-right: 4px;
   color: #1f1d2b;
   border: var(--theme-border-width) solid var(--theme-ink);
   box-shadow: var(--theme-offset-sm);
