@@ -64,6 +64,7 @@ export function WebsiteNav({
                       justifyContent="center"
                       hover={{ backgroundColor: 'surface-sunken' }}
                       backgroundColor={isSelected ? 'surface-sunken' : undefined}
+                      data-nav-selected={isSelected || undefined}
                       borderRadius
                       minHeight="9"
                     >
@@ -81,6 +82,7 @@ export function WebsiteNav({
                     alignItems="center"
                     hover={{ backgroundColor: 'surface-sunken' }}
                     backgroundColor={isSelected ? 'surface-sunken' : undefined}
+                    data-nav-selected={isSelected || undefined}
                     borderRadius
                     minHeight="9"
                   >

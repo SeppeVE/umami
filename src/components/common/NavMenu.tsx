@@ -41,6 +41,7 @@ export function NavMenu({
             borderRadius
             hover={{ backgroundColor: 'surface-sunken' }}
             backgroundColor={isSelected ? 'surface-sunken' : undefined}
+            data-nav-selected={isSelected || undefined}
           >
             <IconLabel icon={icon}>
               <Text weight={isSelected ? 'bold' : 'normal'}>{label}</Text>

@@ -1,0 +1,177 @@
+/*
+ * Playful theme: bold ink outlines, rounded shapes and hard offset shadows,
+ * with a sky blue / orange / yellow palette.
+ *
+ * Kept in one file layered on top of Zen's styles so upstream merges stay easy.
+ */
+
+:root,
+[data-theme="light"] {
+  --theme-ink: #1f1d2b;
+  --theme-paper: #f4f4f6;
+  --theme-card: #ffffff;
+  --theme-sunken: #eef7fd;
+  --theme-sky: #3fb3e8;
+  --theme-orange: #f47b50;
+  --theme-yellow: #fdc316;
+  --theme-green: #5ec26a;
+  --theme-outline: var(--theme-ink);
+  --theme-shadow-color: var(--theme-ink);
+  --theme-divider: #e3e2ea;
+  --theme-muted: #6f6c80;
+}
+
+[data-theme="dark"],
+.dark {
+  --theme-ink: #f2f1f7;
+  --theme-paper: #1c1b24;
+  --theme-card: #282633;
+  --theme-sunken: #233646;
+  --theme-outline: #8d8aa3;
+  --theme-shadow-color: #08070c;
+  --theme-divider: #3a3848;
+  --theme-muted: #a9a6bd;
+}
+
+:root,
+[data-theme="light"],
+[data-theme="dark"],
+.dark {
+  --zen-primary: var(--theme-yellow);
+  --zen-primary-fg: #1f1d2b;
+  --zen-fg: var(--theme-ink);
+  --zen-fg-muted: var(--theme-muted);
+  --zen-surface: var(--theme-card);
+  --zen-surface-raised: var(--theme-paper);
+  --zen-surface-sunken: var(--theme-sunken);
+  --zen-border: var(--theme-divider);
+  --zen-border-muted: var(--theme-divider);
+  --zen-border-strong: var(--theme-outline);
+  --zen-focus-ring: var(--theme-sky);
+  --zen-status-info: var(--theme-sky);
+  --zen-status-success: var(--theme-green);
+  --zen-status-warning: var(--theme-yellow);
+  --zen-status-error: var(--theme-orange);
+
+  --zen-radius: 18px;
+  --zen-shadow: 4px 4px 0 var(--theme-shadow-color);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+
+  --theme-border-width: 2px;
+  --theme-offset: 4px 4px 0 var(--theme-shadow-color);
+  --theme-offset-sm: 3px 3px 0 var(--theme-shadow-color);
+}
+
+/* Cards, panels, inputs, dropdown triggers: anything with a full outline. */
+.border.border-edge {
+  border-width: var(--theme-border-width);
+  border-color: var(--theme-outline);
+}
+
+.border.border-edge.bg-surface {
+  box-shadow: var(--theme-offset);
+}
+
+.rounded {
+  border-radius: 12px;
+}
+
+/* Inputs and select triggers. */
+.border.border-edge.shadow-xs {
+  border-radius: 14px;
+  box-shadow: var(--theme-offset-sm);
+}
+
+.border.border-edge.shadow-xs:focus-within,
+.border.border-edge.shadow-xs:focus-visible {
+  border-color: var(--theme-sky);
+  box-shadow: var(--theme-offset-sm);
+}
+
+/* Buttons become outlined pills. */
+button.rounded,
+a.rounded.inline-flex {
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+button.rounded.bg-interactive,
+button.rounded.bg-primary,
+button.rounded.bg-status-error,
+a.rounded.inline-flex.bg-interactive,
+a.rounded.inline-flex.bg-primary {
+  border-width: var(--theme-border-width);
+  border-color: var(--theme-outline);
+  box-shadow: var(--theme-offset-sm);
+}
+
+button.rounded.bg-interactive,
+a.rounded.inline-flex.bg-interactive {
+  background-color: var(--theme-card);
+}
+
+button.rounded.bg-interactive:hover,
+a.rounded.inline-flex.bg-interactive:hover {
+  background-color: var(--theme-sunken);
+}
+
+button.rounded.bg-primary,
+a.rounded.inline-flex.bg-primary {
+  color: #1f1d2b;
+}
+
+button.rounded.bg-status-error {
+  color: #1f1d2b;
+}
+
+button.rounded:not(:disabled):active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--theme-shadow-color);
+}
+
+/* Selected item in the side navigation. */
+[data-nav-selected] {
+  background-color: var(--theme-yellow) !important;
+  color: #1f1d2b;
+  border: var(--theme-border-width) solid var(--theme-ink);
+  box-shadow: var(--theme-offset-sm);
+}
+
+[data-nav-selected] * {
+  color: #1f1d2b;
+}
+
+/* Popovers, menus and modals. */
+.zen-popover > *,
+[role="dialog"] {
+  border-width: var(--theme-border-width);
+  border-color: var(--theme-outline);
+  box-shadow: var(--theme-offset);
+}
+
+.shadow-lg,
+.shadow-xl {
+  --tw-shadow: var(--theme-offset);
+}
+
+/* Toggles and checkboxes. */
+[data-checked] .bg-primary,
+.data-checked\:bg-primary[data-checked] {
+  border-color: var(--theme-ink);
+}
+
+a.text-primary,
+button.text-primary {
+  color: var(--theme-sky);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}

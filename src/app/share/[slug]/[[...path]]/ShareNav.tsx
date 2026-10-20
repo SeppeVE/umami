@@ -184,6 +184,7 @@ export function ShareNav({
                         justifyContent="center"
                         hover={{ backgroundColor: 'surface-sunken' }}
                         backgroundColor={isSelected ? 'surface-sunken' : undefined}
+                        data-nav-selected={isSelected || undefined}
                         borderRadius
                         minHeight="40px"
                       >
@@ -196,6 +197,7 @@ export function ShareNav({
                       alignItems="center"
                       hover={{ backgroundColor: 'surface-sunken' }}
                       backgroundColor={isSelected ? 'surface-sunken' : undefined}
+                      data-nav-selected={isSelected || undefined}
                       borderRadius
                       minHeight="40px"
                     >
