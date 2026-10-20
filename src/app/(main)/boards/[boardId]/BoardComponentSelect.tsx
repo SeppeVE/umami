@@ -340,6 +340,7 @@ export function BoardComponentSelect({
                   <WebsiteSelect
                     websiteId={selectedEntityId}
                     teamId={teamId}
+                    includeTeams={!teamId}
                     placeholder={t(labels.selectWebsite)}
                     onChange={value => setSelectedEntityId(value as string)}
                   />
